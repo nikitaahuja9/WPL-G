@@ -51,14 +51,6 @@ const Footer = () => {
           </div>
           <div className='footer-block'>
             <div className='block-title'>
-              <h2>Links</h2>
-            </div>
-            <div className='block-content'>
-              <ul>{footerLinks}</ul>
-            </div>
-          </div>
-          <div className='footer-block'>
-            <div className='block-title'>
               <h2>Newsletter</h2>
               <Newsletter />
             </div>

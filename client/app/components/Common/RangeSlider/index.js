@@ -31,7 +31,7 @@ class RangeSlider extends React.Component {
     super(props);
     this.state = {
       sliderValue: 50,
-      rangeValue: [1, 500]
+      rangeValue: [1, 100]
     };
   }
 
@@ -76,9 +76,9 @@ class RangeSlider extends React.Component {
         ) : (
           <Range
             className='slider'
-            pushable={100}
+            pushable={5}
             min={1}
-            max={500}
+            max={100}
             marks={marks}
             handle={handle}
             tipFormatter={value => `$${value}`}

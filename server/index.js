@@ -31,12 +31,8 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose.set('useCreateIndex', true);
-mongoose
-  .connect(database.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-  })
+
+mongoose.connect('mongodb://localhost:27017/cs')
   .then(() =>
     console.log(`${chalk.green('✓')} ${chalk.blue('MongoDB Connected!')}`)
   )

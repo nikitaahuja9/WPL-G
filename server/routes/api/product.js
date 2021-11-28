@@ -411,8 +411,8 @@ router.post(
         return res.status(400).json({ error: 'This sku is already in use.' });
       }
 
-      let imageUrl = '';
-      let imageKey = '';
+      let imageUrl = ``;
+      let imageKey = ``;
 
       if (image) {
         const s3bucket = new AWS.S3({

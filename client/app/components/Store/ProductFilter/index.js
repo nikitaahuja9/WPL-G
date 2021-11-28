@@ -95,22 +95,6 @@ const ProductFilter = props => {
           </div>
         </CardBody>
       </Card>
-      <Card>
-        <CardHeader tag='h3'>Rating</CardHeader>
-        <CardBody>
-          <div className='mx-2 mb-4'>
-            <RangeSlider
-              type='slider'
-              marks={rateMarks}
-              step={20}
-              defaultValue={100}
-              onChange={v => {
-                filterProducts('rating', rating(v));
-              }}
-            />
-          </div>
-        </CardBody>
-      </Card>
     </div>
   );
 };
