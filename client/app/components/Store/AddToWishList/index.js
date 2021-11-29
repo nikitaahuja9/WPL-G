@@ -55,9 +55,9 @@ class AddToWishList extends React.PureComponent {
             defaultChecked={product.isLiked ? product.isLiked : false}
           />
         )}
-        <label htmlFor={`checkbox_${product.sku}`} type='submit'>
+        {/* <label htmlFor={`checkbox_${product.sku}`} type='submit'>
           <HeartIcon className='heart-svg' />
-        </label>
+        </label> */}
       </div>
     );
   }

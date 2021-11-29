@@ -9,8 +9,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
-import Newsletter from '../../../containers/Newsletter';
-
 const Footer = () => {
   const infoLinks = [
     { id: 0, name: 'Contact Us', to: '/contact' },
@@ -49,34 +47,28 @@ const Footer = () => {
               <ul>{footerLinks}</ul>
             </div>
           </div>
-          <div className='footer-block'>
-            <div className='block-title'>
-              <h2>Newsletter</h2>
-              <Newsletter />
-            </div>
-          </div>
         </div>
         <div className='footer-copyright'>
-          <span>© {new Date().getFullYear()} MERN Store</span>
+          <span>© {new Date().getFullYear()} Coffee Shop</span>
         </div>
         <ul className='footer-social-item'>
           <li>
-            <a href='/#facebook' rel='noreferrer noopener' target='_blank'>
+            <a href='#'>
               <span className='facebook-icon' />
             </a>
           </li>
           <li>
-            <a href='/#instagram' rel='noreferrer noopener' target='_blank'>
+            <a href='#'>
               <span className='instagram-icon' />
             </a>
           </li>
           <li>
-            <a href='/#pinterest' rel='noreferrer noopener' target='_blank'>
+            <a href='#'>
               <span className='pinterest-icon' />
             </a>
           </li>
           <li>
-            <a href='/#twitter' rel='noreferrer noopener' target='_blank'>
+            <a href='#'>
               <span className='twitter-icon' />
             </a>
           </li>

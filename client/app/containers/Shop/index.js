@@ -64,7 +64,7 @@ class Shop extends React.PureComponent {
             lg={{ size: 9, order: 2 }}
           >
             <Row className='align-items-center'>
-              <Col
+              {/* <Col
                 xs='6'
                 xs={{ size: 12, order: 1 }}
                 sm={{ size: 12, order: 1 }}
@@ -86,8 +86,8 @@ class Shop extends React.PureComponent {
                     ? 8 * pageNumber
                     : totalProducts
                 } products of ${totalProducts} products`}
-              </Col>
-              <Col
+              </Col> */}
+              {/* <Col
                 xs={{ size: 12, order: 2 }}
                 sm={{ size: 12, order: 2 }}
                 md={{ size: 2, order: 2 }}
@@ -111,7 +111,7 @@ class Shop extends React.PureComponent {
                     filterProducts('sorting', n.value);
                   }}
                 />
-              </Col>
+              </Col> */}
             </Row>
             <Switch>
               <Route exact path='/shop' component={ProductsShop} />
