@@ -75,7 +75,7 @@ const AccountDetails = props => {
               }}
             />
           </Col> */}
-          <Col xs='12' md='12'>
+          {/* <Col xs='12' md='12'>
             <Input
               type={'text'}
               label={'Phone Number'}
@@ -86,7 +86,7 @@ const AccountDetails = props => {
                 accountChange(name, value);
               }}
             />
-          </Col>
+          </Col> */}
         </Row>
         <hr />
         <div className='profile-actions'>

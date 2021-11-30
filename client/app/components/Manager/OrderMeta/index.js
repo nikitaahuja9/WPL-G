@@ -19,9 +19,9 @@ const OrderMeta = props => {
     const isNotDelivered =
       order.products.filter(i => i.status === 'Delivered').length < 1;
 
-    if (isNotDelivered) {
-      return <Button size='sm' text='Cancel Order' onClick={cancelOrder} />;
-    }
+    // if (isNotDelivered) {
+    //   return <Button size='sm' text='Cancel Order' onClick={cancelOrder} />;
+    // }
   };
 
   return (

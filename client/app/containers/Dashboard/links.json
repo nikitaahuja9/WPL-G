@@ -3,8 +3,6 @@
     { "to": "", "name": "Account Details" },
     { "to": "/product", "name": "Products" },
     { "to": "/brand", "name": "Brands" },
-    { "to": "/users", "name": "Users" },
-    { "to": "/merchants", "name": "Merchants" },
     { "to": "/orders", "name": "Orders" }
   ],
   "ROLE_MERCHANT": [

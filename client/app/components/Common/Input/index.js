@@ -26,8 +26,8 @@ const Input = props => {
   } = props;
 
   const _onChange = e => {
-    if (e.target.name == 'image') {
-      onInputChange(e.target.name, e.target.files[0]);
+    if (e.target.name == "image") {
+      onInputChange(e.target.name, e.target.value);
     } else {
       onInputChange(e.target.name, e.target.value);
     }
