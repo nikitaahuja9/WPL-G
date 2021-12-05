@@ -3,7 +3,6 @@ const router = express.Router();
 
 // Bring in Models & Helpers
 const Contact = require('../../models/contact');
-const mailgun = require('../../services/mailgun');
 
 router.post('/add', (req, res) => {
   const name = req.body.name;
@@ -36,8 +35,6 @@ router.post('/add', (req, res) => {
         error: 'Your request could not be processed. Please try again.'
       });
     }
-
-    await mailgun.sendEmail(email, 'contact');
 
     res.status(200).json({
       success: true,

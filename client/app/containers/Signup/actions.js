@@ -6,7 +6,6 @@ import {
   SIGNUP_RESET,
   SET_SIGNUP_LOADING,
   SET_SIGNUP_SUBMITTING,
-  SUBSCRIBE_CHANGE,
   SET_SIGNUP_FORM_ERRORS
 } from './constants';
 
@@ -25,12 +24,6 @@ export const signupChange = (name, value) => {
   };
 };
 
-export const subscribeChange = () => {
-  return {
-    type: SUBSCRIBE_CHANGE
-  };
-};
-
 export const signUp = () => {
   return async (dispatch, getState) => {
     try {
@@ -42,7 +35,6 @@ export const signUp = () => {
       };
 
       const newUser = getState().signup.signupFormData;
-      const isSubscribed = getState().signup.isSubscribed;
 
       const { isValid, errors } = allFieldsValidation(newUser, rules, {
         'required.email': 'Email is required.',
@@ -59,7 +51,6 @@ export const signUp = () => {
       dispatch({ type: SET_SIGNUP_LOADING, payload: true });
 
       const user = {
-        isSubscribed,
         ...newUser
       };
 

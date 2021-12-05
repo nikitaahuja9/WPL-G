@@ -9,8 +9,6 @@ const auth = require('../../middleware/auth');
 
 // Bring in Models & Helpers
 const User = require('../../models/user');
-const mailchimp = require('../../services/mailchimp');
-const mailgun = require('../../services/mailgun');
 const keys = require('../../config/keys');
 
 const { secret, tokenLife } = keys.jwt;
@@ -75,7 +73,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/register', async (req, res) => {
   try {
-    const { email, firstName, lastName, password, isSubscribed } = req.body;
+    const { email, firstName, lastName, password } = req.body;
 
     if (!email) {
       return res
@@ -99,15 +97,6 @@ router.post('/register', async (req, res) => {
         .json({ error: 'That email address is already in use.' });
     }
 
-    let subscribed = false;
-    if (isSubscribed) {
-      const result = await mailchimp.subscribeToNewsletter(email);
-
-      if (result.status === 'subscribed') {
-        subscribed = true;
-      }
-    }
-
     const user = new User({
       email,
       password,
@@ -125,18 +114,10 @@ router.post('/register', async (req, res) => {
       id: registeredUser.id
     };
 
-    await mailgun.sendEmail(
-      registeredUser.email,
-      'signup',
-      null,
-      registeredUser
-    );
-
     const token = jwt.sign(payload, secret, { expiresIn: tokenLife });
 
     res.status(200).json({
       success: true,
-      subscribed,
       token: `Bearer ${token}`,
       user: {
         id: registeredUser.id,
@@ -179,13 +160,6 @@ router.post('/forgot', async (req, res) => {
 
     existingUser.save();
 
-    await mailgun.sendEmail(
-      existingUser.email,
-      'reset',
-      req.headers.host,
-      resetToken
-    );
-
     res.status(200).json({
       success: true,
       message: 'Please check your email for the link to reset your password.'
@@ -225,8 +199,6 @@ router.post('/reset/:token', async (req, res) => {
     resetUser.resetPasswordExpires = undefined;
 
     resetUser.save();
-
-    await mailgun.sendEmail(resetUser.email, 'reset-confirmation');
 
     res.status(200).json({
       success: true,
@@ -272,8 +244,6 @@ router.post('/reset', auth, async (req, res) => {
     const hash = await bcrypt.hash(confirmPassword, salt);
     existingUser.password = hash;
     existingUser.save();
-
-    await mailgun.sendEmail(existingUser.email, 'reset-confirmation');
 
     res.status(200).json({
       success: true,

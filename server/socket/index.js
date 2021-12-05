@@ -1,4 +1,3 @@
-
 const Socket = require('socket.io');
 
 var socket = function(server) {
