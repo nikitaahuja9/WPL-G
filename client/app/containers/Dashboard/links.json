@@ -5,12 +5,6 @@
     { "to": "/brand", "name": "Brands" },
     { "to": "/orders", "name": "Orders" }
   ],
-  "ROLE_MERCHANT": [
-    { "to": "", "name": "Account Details" },
-    { "to": "/brand", "name": "Brand" },
-    { "to": "/product", "name": "Products" },
-    { "to": "/orders", "name": "Orders" }
-  ],
   "ROLE_MEMBER": [
     { "to": "", "name": "Account Details" },
     { "to": "/orders", "name": "Orders" }

@@ -22,11 +22,6 @@ const UserSchema = new Schema({
   password: {
     type: String
   },
-  merchant: {
-    type: Schema.Types.ObjectId,
-    ref: 'Merchant',
-    default: null
-  },
   provider: {
     type: String,
     required: true,
@@ -44,7 +39,7 @@ const UserSchema = new Schema({
   role: {
     type: String,
     default: 'ROLE_MEMBER',
-    enum: ['ROLE_MEMBER', 'ROLE_ADMIN', 'ROLE_MERCHANT']
+    enum: ['ROLE_MEMBER', 'ROLE_ADMIN']
   }
 });
 

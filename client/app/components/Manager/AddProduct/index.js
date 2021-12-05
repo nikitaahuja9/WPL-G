@@ -112,23 +112,7 @@ const AddProduct = props => {
               }}
             />
           </Col>
-          <Col xs='12' md='12'>
-            <SelectOption
-              disabled={user.role === 'ROLE_MERCHANT'}
-              error={formErrors['brand']}
-              name={'brand'}
-              label={'Select Brand'}
-              value={
-                user.role === 'ROLE_MERCHANT'
-                  ? brands[1]
-                  : productFormData.brand
-              }
-              options={brands}
-              handleSelectChange={value => {
-                productChange('brand', value);
-              }}
-            />
-          </Col>
+         
           <Col xs='12' md='12'>
             <Input
               type={'file'}

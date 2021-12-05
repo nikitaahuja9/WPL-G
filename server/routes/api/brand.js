@@ -50,7 +50,7 @@ router.get('/list', async (req, res) => {
   try {
     const brands = await Brand.find({
       isActive: true
-    }).populate('merchant', 'name');
+    });
 
     res.status(200).json({
       brands
@@ -66,18 +66,12 @@ router.get('/list', async (req, res) => {
 router.get(
   '/',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       let brands = null;
 
-      if (req.user.merchant) {
-        brands = await Brand.find({
-          merchant: req.user.merchant
-        }).populate('merchant', 'name');
-      } else {
-        brands = await Brand.find({}).populate('merchant', 'name');
-      }
+        brands = await Brand.find({});
 
       res.status(200).json({
         brands
@@ -115,21 +109,12 @@ router.get('/:id', async (req, res) => {
 router.get(
   '/list/select',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       let brands = null;
 
-      if (req.user.merchant) {
-        brands = await Brand.find(
-          {
-            merchant: req.user.merchant
-          },
-          'name'
-        );
-      } else {
         brands = await Brand.find({}, 'name');
-      }
 
       res.status(200).json({
         brands
@@ -145,7 +130,7 @@ router.get(
 router.put(
   '/:id',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const brandId = req.params.id;
@@ -171,7 +156,7 @@ router.put(
 router.put(
   '/:id/active',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const brandId = req.params.id;

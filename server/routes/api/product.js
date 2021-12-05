@@ -341,7 +341,7 @@ router.get('/list/select', auth, async (req, res) => {
 router.post(
   '/add',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   upload.single('image'),
   async (req, res) => {
     try {
@@ -435,36 +435,15 @@ router.post(
 router.get(
   '/',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       let products = [];
 
-      if (req.user.merchant) {
-        const brands = await Brand.find({
-          merchant: req.user.merchant
-        }).populate('merchant', '_id');
-
-        const brandId = brands[0]['_id'];
-
-        products = await Product.find({})
-          .populate({
-            path: 'brand',
-            populate: {
-              path: 'merchant',
-              model: 'Merchant'
-            }
-          })
-          .where('brand', brandId);
-      } else {
+      
         products = await Product.find({}).populate({
-          path: 'brand',
-          populate: {
-            path: 'merchant',
-            model: 'Merchant'
-          }
-        });
-      }
+          path: 'brand'});
+      
 
       res.status(200).json({
         products
@@ -481,33 +460,17 @@ router.get(
 router.get(
   '/:id',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const productId = req.params.id;
 
       let productDoc = null;
-
-      if (req.user.merchant) {
-        const brands = await Brand.find({
-          merchant: req.user.merchant
-        }).populate('merchant', '_id');
-
-        const brandId = brands[0]['_id'];
-
-        productDoc = await Product.findOne({ _id: productId })
-          .populate({
-            path: 'brand',
-            select: 'name'
-          })
-          .where('brand', brandId);
-      } else {
         productDoc = await Product.findOne({ _id: productId }).populate({
           path: 'brand',
           select: 'name'
         });
-      }
-
+      
       if (!productDoc) {
         return res.status(404).json({
           message: 'No product found.'
@@ -528,7 +491,7 @@ router.get(
 router.put(
   '/:id',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const productId = req.params.id;
@@ -554,7 +517,7 @@ router.put(
 router.put(
   '/:id/active',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const productId = req.params.id;
@@ -580,7 +543,7 @@ router.put(
 router.delete(
   '/delete/:id',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Merchant),
+  role.checkRole(role.ROLES.Admin),
   async (req, res) => {
     try {
       const product = await Product.deleteOne({ _id: req.params.id });

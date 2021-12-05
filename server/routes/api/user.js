@@ -18,17 +18,6 @@ router.get(
 
       const regex = new RegExp(search, 'i');
 
-      const users = await User.find(
-        {
-          $or: [
-            { firstName: { $regex: regex } },
-            { lastName: { $regex: regex } },
-            { email: { $regex: regex } }
-          ]
-        },
-        { password: 0, _id: 0 }
-      ).populate('merchant', 'name');
-
       res.status(200).json({
         users
       });
