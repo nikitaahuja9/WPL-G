@@ -1,9 +1,3 @@
-/**
- *
- * Checkout
- *
- */
-
 import React from 'react';
 
 import Button from '../../Common/Button';

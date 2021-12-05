@@ -1,9 +1,3 @@
-/**
- *
- * Checkbox
- *
- */
-
 import React from 'react';
 
 const Checkbox = props => {

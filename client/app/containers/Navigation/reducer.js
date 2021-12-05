@@ -1,9 +1,3 @@
-/*
- *
- * Navigation reducer
- *
- */
-
 import {
   TOGGLE_MENU,
   TOGGLE_CART,

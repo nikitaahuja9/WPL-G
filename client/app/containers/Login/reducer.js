@@ -1,9 +1,3 @@
-/*
- *
- * Login reducer
- *
- */
-
 import {
   LOGIN_CHANGE,
   LOGIN_RESET,

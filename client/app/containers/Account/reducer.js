@@ -1,9 +1,3 @@
-/*
- *
- * Account reducer
- *
- */
-
 import {
   ACCOUNT_CHANGE,
   FETCH_PROFILE,

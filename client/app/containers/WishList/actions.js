@@ -1,9 +1,3 @@
-/*
- *
- * WishList actions
- *
- */
-
 import { success, warning, info } from 'react-notification-system-redux';
 import { filterProducts } from '../Product/actions';
 import axios from 'axios';

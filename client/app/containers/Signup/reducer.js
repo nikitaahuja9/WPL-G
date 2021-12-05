@@ -1,9 +1,3 @@
-/*
- *
- * Signup reducer
- *
- */
-
 import {
   SIGNUP_CHANGE,
   SIGNUP_RESET,

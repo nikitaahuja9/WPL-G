@@ -1,9 +1,3 @@
-/**
- *
- * SocialShare
- *
- */
-
  import React from 'react';
 
  import {

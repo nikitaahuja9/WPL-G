@@ -1,9 +1,3 @@
-/**
- *
- * date.js
- * this helper formulate date
- */
-
 const today = new Date();
 
 const dateOptions = {

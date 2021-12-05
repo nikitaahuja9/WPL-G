@@ -1,9 +1,3 @@
-/*
- *
- * Newsletter reducer
- *
- */
-
 import {
   NEWSLETTER_CHANGE,
   SET_NEWSLETTER_FORM_ERRORS,

@@ -1,9 +1,3 @@
-/**
- *
- * UserSearch
- *
- */
-
 import React from 'react';
 
 import SearchBar from '../../Common/SearchBar';

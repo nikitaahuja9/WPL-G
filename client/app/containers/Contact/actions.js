@@ -1,9 +1,3 @@
-/*
- *
- * Contact actions
- *
- */
-
 import { success } from 'react-notification-system-redux';
 import axios from 'axios';
 

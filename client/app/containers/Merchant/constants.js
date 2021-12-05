@@ -1,9 +1,3 @@
-/*
- *
- * Merchant constants
- *
- */
-
 export const FETCH_MERCHANTS = 'src/Merchant/FETCH_MERCHANTS';
 export const REMOVE_MERCHANT = 'src/Merchant/REMOVE_MERCHANT';
 export const SELL_FORM_CHANGE = 'src/Merchant/SELL_FORM_CHANGE';

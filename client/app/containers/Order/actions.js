@@ -1,9 +1,3 @@
-/*
- *
- * Order actions
- *
- */
-
 import { push } from 'connected-react-router';
 import axios from 'axios';
 import { success } from 'react-notification-system-redux';

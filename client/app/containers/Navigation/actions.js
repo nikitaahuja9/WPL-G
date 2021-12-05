@@ -1,9 +1,3 @@
-/*
- *
- * Navigation actions
- *
- */
-
 import axios from 'axios';
 import handleError from '../../utils/error';
 import {

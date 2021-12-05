@@ -1,9 +1,3 @@
-/*
- *
- * Brand reducer
- *
- */
-
 import {
   FETCH_BRANDS,
   FETCH_STORE_BRANDS,

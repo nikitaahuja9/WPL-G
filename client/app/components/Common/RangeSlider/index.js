@@ -1,9 +1,3 @@
-/**
- *
- *  Range Slider
- *
- */
-
  import React from 'react';
  import Slider, { SliderTooltip } from 'rc-slider';
  

@@ -1,9 +1,3 @@
-/*
- *
- * Dashboard actions
- *
- */
-
 import { TOGGLE_DASHBOARD_MENU } from './constants';
 
 export const toggleDashboardMenu = () => {

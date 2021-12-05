@@ -1,9 +1,3 @@
-/*
- *
- * ForgotPassword reducer
- *
- */
-
 import {
   FORGOT_PASSWORD_CHANGE,
   FORGOT_PASSWORD_RESET,

@@ -1,9 +1,3 @@
-/*
- *
- * Product reducer
- *
- */
-
 import {
   FETCH_PRODUCTS,
   FETCH_STORE_PRODUCTS,

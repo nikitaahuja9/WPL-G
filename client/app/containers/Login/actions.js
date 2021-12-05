@@ -1,9 +1,3 @@
-/*
- *
- * Login actions
- *
- */
-
 import { success } from 'react-notification-system-redux';
 import axios from 'axios';
 import { push } from 'connected-react-router';

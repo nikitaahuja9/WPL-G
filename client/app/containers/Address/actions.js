@@ -1,9 +1,3 @@
-/*
- *
- * Address actions
- *
- */
-
 import { goBack } from 'connected-react-router';
 import { success } from 'react-notification-system-redux';
 import axios from 'axios';

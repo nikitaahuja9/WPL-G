@@ -1,9 +1,3 @@
-/*
- *
- * Shop actions
- *
- */
-
 import { DEFAULT_ACTION } from './constants';
 
 export const defaultAction = () => {

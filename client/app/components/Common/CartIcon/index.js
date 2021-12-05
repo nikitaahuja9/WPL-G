@@ -1,9 +1,3 @@
-/**
- *
- * CartIcon
- *
- */
-
 import React from 'react';
 
 import { BagIcon } from '../Icon';

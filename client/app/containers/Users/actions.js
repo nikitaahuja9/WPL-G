@@ -1,9 +1,3 @@
-/*
- *
- * Users actions
- *
- */
-
 import axios from 'axios';
 
 import { FETCH_USERS } from './constants';

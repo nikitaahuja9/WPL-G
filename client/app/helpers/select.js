@@ -1,9 +1,3 @@
-/**
- *
- * select.js
- * this helper formulate data into select options
- */
-
 export const formatSelectOptions = (data, empty = false, from) => {
   let newSelectOptions = [];
 

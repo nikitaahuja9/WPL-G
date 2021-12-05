@@ -1,9 +1,3 @@
-/*
- *
- * Order reducer
- *
- */
-
 import {
   FETCH_ORDERS,
   FETCH_SEARCHED_ORDERS,

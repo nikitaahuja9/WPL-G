@@ -1,9 +1,3 @@
-/*
- *
- * Dashboard reducer
- *
- */
-
 import { TOGGLE_DASHBOARD_MENU } from './constants';
 
 const initialState = {

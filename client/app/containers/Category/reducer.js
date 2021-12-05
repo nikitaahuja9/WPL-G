@@ -1,9 +1,3 @@
-/*
- *
- * Category reducer
- *
- */
-
 import {
   FETCH_CATEGORIES,
   FETCH_STORE_CATEGORIES,

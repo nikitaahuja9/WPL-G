@@ -1,9 +1,3 @@
-/*
- *
- * Review constants
- *
- */
-
 export const FETCH_REVIEWS = 'src/Review/FETCH_REVIEWS';
 export const ADD_REVIEW = 'src/Review/ADD_REVIEW';
 export const REMOVE_REVIEW = 'src/Review/REMOVE_REVIEW';

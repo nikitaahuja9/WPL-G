@@ -1,9 +1,3 @@
-/**
- *
- * AddToWishList
- *
- */
-
 import React from 'react';
 
 import { HeartIcon } from '../../Common/Icon';

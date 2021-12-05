@@ -1,9 +1,3 @@
-/**
- *
- * Pagination
- *
- */
-
 import React from 'react';
 import {
   Pagination as RPagination,

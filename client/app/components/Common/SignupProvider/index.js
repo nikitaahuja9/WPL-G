@@ -1,9 +1,3 @@
-/**
- *
- * SignupProvider
- *
- */
-
 import React from 'react';
 
 import { GoogleIcon, FacebookIcon } from '../Icon';

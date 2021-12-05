@@ -1,9 +1,3 @@
-/**
- *
- * LoadingIndicator
- *
- */
-
 import React from 'react';
 
 const LoadingIndicator = props => {

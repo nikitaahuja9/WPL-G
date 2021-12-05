@@ -1,9 +1,3 @@
-/*
- *
- * Authentication actions
- *
- */
-
 import { SET_AUTH, CLEAR_AUTH } from './constants';
 
 export const setAuth = () => {

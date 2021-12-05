@@ -1,9 +1,3 @@
-/*
- *
- * WishList reducer
- *
- */
-
 import {
   FETCH_WISHLIST,
   SET_WISHLIST_LOADING,

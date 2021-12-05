@@ -1,9 +1,3 @@
-/*
- *
- * Cart reducer
- *
- */
-
 import {
   HANDLE_CART,
   ADD_TO_CART,

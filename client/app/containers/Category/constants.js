@@ -1,9 +1,3 @@
-/*
- *
- * Category constants
- *
- */
-
 export const FETCH_CATEGORIES = 'src/Category/FETCH_CATEGORIES';
 export const FETCH_STORE_CATEGORIES = 'src/Category/FETCH_STORE_CATEGORIES';
 export const FETCH_CATEGORY = 'src/Category/FETCH_CATEGORY';

@@ -1,9 +1,3 @@
-/**
- *
- * MerchantList
- *
- */
-
 import React from 'react';
 
 import { formatDate } from '../../../helpers/date';

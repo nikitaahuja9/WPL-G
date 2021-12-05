@@ -1,9 +1,3 @@
-/*
- *
- * Users reducer
- *
- */
-
 import { FETCH_USERS } from './constants';
 
 const initialState = {

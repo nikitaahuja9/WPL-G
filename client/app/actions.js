@@ -1,9 +1,3 @@
-/**
- *
- * actions.js
- * actions configuration
- */
-
 import { bindActionCreators } from 'redux';
 
 import * as application from './containers/Application/actions';

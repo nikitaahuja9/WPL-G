@@ -1,9 +1,3 @@
-/**
- *
- * Icon
- *
- */
-
 import React from 'react';
 
 const BagIcon = () => {

@@ -1,9 +1,3 @@
-/**
- *
- * UserRole
- *
- */
-
 import React from 'react';
 
 const UserRole = props => {

@@ -1,9 +1,3 @@
-/*
- *
- * Sell reducer
- *
- */
-
 import {
   CONTACT_FORM_CHANGE,
   SET_CONTACT_FORM_ERRORS,

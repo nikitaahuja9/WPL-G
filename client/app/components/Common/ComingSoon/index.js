@@ -1,9 +1,3 @@
-/**
- *
- * ComingSoon
- *
- */
-
 import React from 'react';
 
 const ComingSoon = props => {

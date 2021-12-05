@@ -1,9 +1,3 @@
-/*
- *
- * Address reducer
- *
- */
-
 import {
   FETCH_ADDRESS,
   FETCH_ADDRESSES,

@@ -1,9 +1,3 @@
-/*
- *
- * Merchant reducer
- *
- */
-
 import {
   FETCH_MERCHANTS,
   REMOVE_MERCHANT,

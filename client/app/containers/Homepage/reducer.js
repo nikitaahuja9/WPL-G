@@ -1,9 +1,3 @@
-/*
- *
- * Homepage reducer
- *
- */
-
 import { DEFAULT_ACTION } from './constants';
 
 const initialState = {};

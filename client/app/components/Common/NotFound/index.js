@@ -1,9 +1,3 @@
-/**
- *
- * NotFound
- *
- */
-
 import React from 'react';
 
 const NotFound = props => {

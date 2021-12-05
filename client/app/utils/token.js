@@ -1,9 +1,3 @@
-/**
- *
- * token.js
- * axios default headers setup
- */
-
 import axios from 'axios';
 
 const setToken = token => {

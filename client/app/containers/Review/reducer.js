@@ -1,9 +1,3 @@
-/*
- *
- * Review reducer
- *
- */
-
 import {
   FETCH_REVIEWS,
   ADD_REVIEW,
