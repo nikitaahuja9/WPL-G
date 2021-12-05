@@ -97,12 +97,6 @@ class Login extends React.PureComponent {
                 onClick={registerLink}
               />
             </div>
-            {/* <Link
-              className='redirect-link forgot-password-link'
-              to={'/forgot-password'}
-            >
-              Forgot Password?
-            </Link> */}
           </div>
         </form>
       </div>

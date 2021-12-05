@@ -7,14 +7,12 @@ import applicationReducer from './containers/Application/reducer';
 import homepageReducer from './containers/Homepage/reducer';
 import signupReducer from './containers/Signup/reducer';
 import loginReducer from './containers/Login/reducer';
-import forgotPasswordReducer from './containers/ForgotPassword/reducer';
 import navigationReducer from './containers/Navigation/reducer';
 import authenticationReducer from './containers/Authentication/reducer';
 import cartReducer from './containers/Cart/reducer';
 import dashboardReducer from './containers/Dashboard/reducer';
 import accountReducer from './containers/Account/reducer';
 import addressReducer from './containers/Address/reducer';
-import resetPasswordReducer from './containers/ResetPassword/reducer';
 import usersReducer from './containers/Users/reducer';
 import productReducer from './containers/Product/reducer';
 import categoryReducer from './containers/Category/reducer';
@@ -35,14 +33,12 @@ const createReducer = history =>
     homepage: homepageReducer,
     signup: signupReducer,
     login: loginReducer,
-    forgotPassword: forgotPasswordReducer,
     navigation: navigationReducer,
     authentication: authenticationReducer,
     cart: cartReducer,
     dashboard: dashboardReducer,
     account: accountReducer,
     address: addressReducer,
-    resetPassword: resetPasswordReducer,
     users: usersReducer,
     product: productReducer,
     category: categoryReducer,

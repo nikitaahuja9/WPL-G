@@ -161,8 +161,7 @@ router.post('/signup/:token', async (req, res) => {
     }
 
     const userDoc = await User.findOne({
-      email,
-      resetPasswordToken: req.params.token
+      email
     });
 
     const salt = await bcrypt.genSalt(10);
@@ -173,8 +172,7 @@ router.post('/signup/:token', async (req, res) => {
       email,
       firstName,
       lastName,
-      password: hash,
-      resetPasswordToken: undefined
+      password: hash
     };
 
     await User.findOneAndUpdate(query, update, {
@@ -254,13 +252,11 @@ const createMerchantUser = async (email, name, merchant, host) => {
   } else {
     const buffer = await crypto.randomBytes(48);
     const resetToken = buffer.toString('hex');
-    const resetPasswordToken = resetToken;
 
     const user = new User({
       email,
       firstName,
       lastName,
-      resetPasswordToken,
       merchant,
       role: role.ROLES.Merchant
     });

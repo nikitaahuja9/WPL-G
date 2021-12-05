@@ -45,13 +45,6 @@ const UserSchema = new Schema({
     type: String,
     default: 'ROLE_MEMBER',
     enum: ['ROLE_MEMBER', 'ROLE_ADMIN', 'ROLE_MERCHANT']
-  },
-  resetPasswordToken: { type: String },
-  resetPasswordExpires: { type: Date },
-  updated: Date,
-  created: {
-    type: Date,
-    default: Date.now
   }
 });
 

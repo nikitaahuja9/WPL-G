@@ -15,8 +15,6 @@ import Dashboard from '../Dashboard';
 import Navigation from '../Navigation';
 import Authentication from '../Authentication';
 import Notification from '../Notification';
-import ForgotPassword from '../ForgotPassword';
-import ResetPassword from '../ResetPassword';
 import Shop from '../Shop';
 import BrandsPage from '../BrandsPage';
 import ProductPage from '../ProductPage';
@@ -75,11 +73,6 @@ class Application extends React.PureComponent {
                 <Route
                   path='/merchant-signup/:token'
                   component={MerchantSignup}
-                />
-                <Route path='/forgot-password' component={ForgotPassword} />
-                <Route
-                  path='/reset-password/:token'
-                  component={ResetPassword}
                 />
                 <Route path='/auth/success' component={AuthSuccess} />
                 <Route
