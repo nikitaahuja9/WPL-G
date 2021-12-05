@@ -56,31 +56,6 @@ const AccountDetails = props => {
               }}
             />
           </Col>
-          {/* TODO: update email feature to be added instead form change */}
-          {/* <Col xs='12' md='6'>
-            <Input
-              type={'text'}
-              label={'Email'}
-              name={'email'}
-              placeholder={'Please Enter Your Email'}
-              value={user.email ? user.email : ''}
-              onInputChange={(name, value) => {
-                accountChange(name, value);
-              }}
-            />
-          </Col> */}
-          {/* <Col xs='12' md='12'>
-            <Input
-              type={'text'}
-              label={'Phone Number'}
-              name={'phoneNumber'}
-              placeholder={'Please Enter Your Phone Number'}
-              value={user.phoneNumber ? user.phoneNumber : ''}
-              onInputChange={(name, value) => {
-                accountChange(name, value);
-              }}
-            />
-          </Col> */}
         </Row>
         <hr />
         <div className='profile-actions'>

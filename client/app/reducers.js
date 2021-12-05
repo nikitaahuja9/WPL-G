@@ -12,7 +12,6 @@ import authenticationReducer from './containers/Authentication/reducer';
 import cartReducer from './containers/Cart/reducer';
 import dashboardReducer from './containers/Dashboard/reducer';
 import accountReducer from './containers/Account/reducer';
-import addressReducer from './containers/Address/reducer';
 import usersReducer from './containers/Users/reducer';
 import productReducer from './containers/Product/reducer';
 import categoryReducer from './containers/Category/reducer';
@@ -35,7 +34,6 @@ const createReducer = history =>
     cart: cartReducer,
     dashboard: dashboardReducer,
     account: accountReducer,
-    address: addressReducer,
     users: usersReducer,
     product: productReducer,
     category: categoryReducer,

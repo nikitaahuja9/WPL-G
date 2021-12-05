@@ -7,7 +7,6 @@ import AccountMenu from '../AccountMenu';
 import Page404 from '../../Common/Page404';
 
 import Account from '../../../containers/Account';
-import Address from '../../../containers/Address';
 import Order from '../../../containers/Order';
 import Users from '../../../containers/Users';
 import Category from '../../../containers/Category';
@@ -25,7 +24,6 @@ const Admin = props => {
           <div className='panel-body'>
             <Switch>
               <Route exact path='/dashboard' component={Account} />
-              <Route path='/dashboard/address' component={Address} />
               <Route path='/dashboard/product' component={Product} />
               <Route path='/dashboard/category' component={Category} />
               <Route path='/dashboard/brand' component={Brand} />

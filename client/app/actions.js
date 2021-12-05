@@ -9,7 +9,6 @@ import * as navigation from './containers/Navigation/actions';
 import * as cart from './containers/Cart/actions';
 import * as dashboard from './containers/Dashboard/actions';
 import * as account from './containers/Account/actions';
-import * as address from './containers/Address/actions';
 import * as users from './containers/Users/actions';
 import * as product from './containers/Product/actions';
 import * as category from './containers/Category/actions';
@@ -31,7 +30,6 @@ export default function mapDispatchToProps(dispatch) {
       ...cart,
       ...dashboard,
       ...account,
-      ...address,
       ...users,
       ...product,
       ...category,

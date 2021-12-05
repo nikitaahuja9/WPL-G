@@ -14,7 +14,6 @@ const AccountMenu = props => {
         text='Dashboard Menu'
         className={`${isMenuOpen ? 'menu-panel' : 'menu-panel collapse'}`}
         ariaExpanded={isMenuOpen ? 'true' : 'false'}
-        // ariaLabel={isMenuOpen ? 'dashboard menu expanded' : 'dashboard menu collapse'}
         onClick={toggleMenu}
       />
       <h3 className='panel-title'>Account</h3>
