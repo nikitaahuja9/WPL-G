@@ -93,6 +93,5 @@ export const signOut = () => {
     localStorage.removeItem('token');
 
     dispatch(success(successfulOptions));
-    // dispatch(clearCart());
   };
 };

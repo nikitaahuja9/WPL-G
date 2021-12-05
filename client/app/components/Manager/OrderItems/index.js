@@ -134,10 +134,6 @@ const OrderItems = props => {
                 </div>
 
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
-                  {/* <div className='text-center'>
-                    <p className='order-label order-status'>{`${item.status}`}</p>
-                    <p>Status</p>
-                  </div> */}
 
                   <div className='text-center'>
                     <p className='order-label'>{` ${item.quantity}`}</p>
@@ -151,11 +147,6 @@ const OrderItems = props => {
                   </div>
                 </div>
               </div>
-              {/* {item.product && (
-                <div className='text-right mt-2 mt-md-0'>
-                  {renderItemsAction(item)}
-                </div>
-              )} */}
             </div>
           </Col>
         ))}

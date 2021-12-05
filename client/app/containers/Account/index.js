@@ -7,9 +7,6 @@ import AccountDetails from '../../components/Manager/AccountDetails';
 import SubPage from '../../components/Manager/SubPage';
 
 class Account extends React.PureComponent {
-  componentDidMount() {
-    // this.props.fetchProfile();
-  }
 
   render() {
     const { user, accountChange, updateProfile } = this.props;

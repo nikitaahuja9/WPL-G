@@ -6,7 +6,6 @@ import actions from '../../actions';
 
 import SubPage from '../../components/Manager/SubPage';
 import OrderList from '../../components/Manager/OrderList';
-import OrderSearch from '../../components/Manager/OrderSearch';
 import NotFound from '../../components/Common/NotFound';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 
@@ -27,7 +26,6 @@ class Customer extends React.PureComponent {
             user.role === 'ROLE_ADMIN' && history.push('/dashboard/orders')
           }
         >
-          <OrderSearch onSearchSubmit={searchOrders} />
           {isLoading ? (
             <LoadingIndicator inline />
           ) : orders.length > 0 ? (

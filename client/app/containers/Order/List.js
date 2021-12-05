@@ -6,7 +6,6 @@ import actions from '../../actions';
 
 import SubPage from '../../components/Manager/SubPage';
 import OrderList from '../../components/Manager/OrderList';
-import OrderSearch from '../../components/Manager/OrderSearch';
 import NotFound from '../../components/Common/NotFound';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 
@@ -22,18 +21,6 @@ class List extends React.PureComponent {
   componentDidMount() {
     this.props.fetchOrders();
   }
-
-  handleOrderSearch = e => {
-    if (e.value.length >= 2) {
-      this.setState({
-        search: e.value
-      });
-    } else {
-      this.setState({
-        search: ''
-      });
-    }
-  };
 
   render() {
     const { history, user, orders, isLoading, searchOrders } = this.props;
@@ -53,11 +40,6 @@ class List extends React.PureComponent {
             history.push('/dashboard/orders/customers')
           }
         >
-          <OrderSearch
-            onBlur={this.handleOrderSearch}
-            onSearch={this.handleOrderSearch}
-            onSearchSubmit={this.handleOrderSearch}
-          />
           {isLoading ? (
             <LoadingIndicator inline />
           ) : orders.length > 0 ? (
