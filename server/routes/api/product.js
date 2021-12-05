@@ -9,7 +9,6 @@ var jwt = require('jsonwebtoken');
 const Product = require('../../models/product');
 const Brand = require('../../models/brand');
 const Category = require('../../models/category');
-const Wishlist = require('../../models/wishlist');
 const auth = require('../../middleware/auth');
 const role = require('../../middleware/role');
 const checkAuth = require('../../helpers/auth');

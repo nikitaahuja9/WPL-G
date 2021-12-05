@@ -2,10 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import AddToWishList from '../AddToWishList';
-
 const ProductList = props => {
-  const { products, updateWishlist, authenticated } = props;
+  const { products } = props;
 
   return (
     <div className='product-list'>
@@ -13,13 +11,6 @@ const ProductList = props => {
         <div key={index} className='mb-3 mb-md-0'>
           <div className='product-container'>
             <div className='item-box'>
-              <div className='add-wishlist-box'>
-                <AddToWishList
-                  product={product}
-                  updateWishlist={updateWishlist}
-                  authenticated={authenticated}
-                />
-              </div>
 
               <div className='item-link'>
                 <Link

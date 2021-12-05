@@ -23,7 +23,6 @@ import merchantReducer from './containers/Merchant/reducer';
 import contactReducer from './containers/Contact/reducer';
 import orderReducer from './containers/Order/reducer';
 import reviewReducer from './containers/Review/reducer';
-import wishListReducer from './containers/WishList/reducer';
 
 const createReducer = history =>
   combineReducers({
@@ -48,8 +47,7 @@ const createReducer = history =>
     merchant: merchantReducer,
     contact: contactReducer,
     order: orderReducer,
-    review: reviewReducer,
-    wishlist: wishListReducer
+    review: reviewReducer
   });
 
 export default createReducer;
