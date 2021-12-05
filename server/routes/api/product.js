@@ -412,7 +412,7 @@ router.post(
         taxable,
         isActive,
         brand,
-        imageUrl:'/images/7.jpeg',
+        imageUrl:'/images/coffee.png',
         imageKey:'imageUrl'
       });
 

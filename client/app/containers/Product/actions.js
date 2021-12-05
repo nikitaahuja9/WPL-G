@@ -248,9 +248,11 @@ export const addProduct = () => {
         isActive: product.isActive,
         taxable: product.taxable.value,
         brand:
-          brand != 0
+          user.role !== 'ROLE_MEMBER'
+            ? brand != 0
               ? brand
               : null
+            : brands[1].value
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
