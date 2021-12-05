@@ -18,7 +18,6 @@ import categoryReducer from './containers/Category/reducer';
 import brandReducer from './containers/Brand/reducer';
 import navigationMenuReducer from './containers/NavigationMenu/reducer';
 import shopReducer from './containers/Shop/reducer';
-import contactReducer from './containers/Contact/reducer';
 import orderReducer from './containers/Order/reducer';
 
 const createReducer = history =>
@@ -40,7 +39,6 @@ const createReducer = history =>
     brand: brandReducer,
     menu: navigationMenuReducer,
     shop: shopReducer,
-    contact: contactReducer,
     order: orderReducer
   });
 

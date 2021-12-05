@@ -17,7 +17,6 @@ import Notification from '../Notification';
 import Shop from '../Shop';
 import BrandsPage from '../BrandsPage';
 import ProductPage from '../ProductPage';
-import Contact from '../Contact';
 import OrderSuccess from '../OrderSuccess';
 import OrderPage from '../OrderPage';
 import AuthSuccess from '../AuthSuccess';
@@ -60,7 +59,6 @@ class Application extends React.PureComponent {
               <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/shop' component={Shop} />
-                <Route path='/contact' component={Contact} />
                 <Route path='/brands' component={BrandsPage} />
                 <Route path='/product/:slug' component={ProductPage} />
                 <Route path='/order/success/:id' component={OrderSuccess} />
