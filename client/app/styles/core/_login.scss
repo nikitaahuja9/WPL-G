@@ -13,8 +13,7 @@
   cursor: pointer;
 }
 
-.google-btn,
-.facebook-btn {
+.google-btn {
   @include flex();
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
@@ -35,8 +34,7 @@
     margin-left: 5px;
   }
 
-  .google-icon,
-  .facebook-icon {
+  .google-icon{
     width: 30px;
     height: 30px;
   }

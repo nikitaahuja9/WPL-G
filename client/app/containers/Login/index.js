@@ -9,8 +9,6 @@ import actions from '../../actions';
 import Input from '../../components/Common/Input';
 import Button from '../../components/Common/Button';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
-import SignupProvider from '../../components/Common/SignupProvider';
-
 class Login extends React.PureComponent {
   render() {
     const {
@@ -73,13 +71,6 @@ class Login extends React.PureComponent {
                 />
               </Col>
             </Col>
-            {/* <Col
-              xs={{ size: 12, order: 1 }}
-              md={{ size: '6', order: 2 }}
-              className='mb-2 mb-md-0'
-            >
-              <SignupProvider />
-            </Col> */}
           </Row>
           <hr />
           <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>

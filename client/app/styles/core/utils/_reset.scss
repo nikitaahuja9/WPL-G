@@ -119,15 +119,6 @@ embed {
   max-width: 100%;
 }
 
-/*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-     In fact, it *will* cause problems with Google Maps' controls at small size.
-    If this is the case for you, try uncommenting the following:
-#map img {
-        max-width: none;
-}
-*/
-
 /* force a vertical scrollbar to prevent a jumpy page */
 html {
   overflow-y: scroll;
