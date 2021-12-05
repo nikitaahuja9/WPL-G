@@ -75,7 +75,6 @@ router.post('/list', async (req, res) => {
   try {
     let {
       sortOrder,
-      rating,
       max,
       min,
       category,
@@ -85,9 +84,6 @@ router.post('/list', async (req, res) => {
     const pageSize = 8;
     const categoryFilter = category ? { category } : {};
     const priceFilter = min && max ? { price: { $gte: min, $lte: max } } : {};
-    const ratingFilter = rating
-      ? { rating: { $gte: rating } }
-      : { rating: { $gte: rating } };
 
     const basicQuery = [
       {
@@ -117,41 +113,14 @@ router.post('/list', async (req, res) => {
         }
       },
       {
-        $lookup: {
-          from: 'reviews',
-          localField: '_id',
-          foreignField: 'product',
-          as: 'reviews'
-        }
-      },
-      {
-        $addFields: {
-          totalRatings: { $sum: '$reviews.rating' },
-          totalReviews: { $size: '$reviews' }
-        }
-      },
-      {
-        $addFields: {
-          averageRating: {
-            $cond: [
-              { $eq: ['$totalReviews', 0] },
-              0,
-              { $divide: ['$totalRatings', '$totalReviews'] }
-            ]
-          }
-        }
-      },
-      {
         $match: {
           isActive: true,
-          price: priceFilter.price,
-          averageRating: ratingFilter.rating
+          price: priceFilter.price
         }
       },
       {
         $project: {
-          brands: 0,
-          reviews: 0
+          brands: 0
         }
       }
     ];

@@ -10,14 +10,12 @@ import Button from '../../components/Common/Button';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 import NotFound from '../../components/Common/NotFound';
 import { BagIcon } from '../../components/Common/Icon';
-import ProductReviews from '../../components/Store/ProductReviews';
 import SocialShare from '../../components/Store/SocialShare';
 
 class ProductPage extends React.PureComponent {
   componentDidMount() {
     const slug = this.props.match.params.slug;
     this.props.fetchStoreProduct(slug);
-    this.props.fetchProductReviews(slug);
     document.body.classList.add('product-page');
   }
 
@@ -41,13 +39,7 @@ class ProductPage extends React.PureComponent {
       itemsInCart,
       productShopChange,
       handleAddToCart,
-      handleRemoveFromCart,
-      addProductReview,
-      reviewsSummary,
-      reviews,
-      reviewFormData,
-      reviewChange,
-      reviewFormErrors
+      handleRemoveFromCart
     } = this.props;
 
     return (
@@ -149,14 +141,6 @@ class ProductPage extends React.PureComponent {
                 </div>
               </Col>
             </Row>
-            <ProductReviews
-              reviewFormData={reviewFormData}
-              reviewFormErrors={reviewFormErrors}
-              reviews={reviews}
-              reviewsSummary={reviewsSummary}
-              reviewChange={reviewChange}
-              addReview={addProductReview}
-            />
           </>
         ) : (
           <NotFound message='no product found.' />
@@ -172,10 +156,6 @@ const mapStateToProps = state => {
     productShopData: state.product.productShopData,
     shopFormErrors: state.product.shopFormErrors,
     isLoading: state.product.isLoading,
-    reviews: state.review.productReviews,
-    reviewsSummary: state.review.reviewsSummary,
-    reviewFormData: state.review.reviewFormData,
-    reviewFormErrors: state.review.reviewFormErrors,
     itemsInCart: state.cart.itemsInCart
   };
 };

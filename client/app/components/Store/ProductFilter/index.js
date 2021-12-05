@@ -8,68 +8,6 @@ const priceMarks = {
   500: { label: <p className='fw-1 text-black'>$500</p> }
 };
 
-const rateMarks = {
-  0: {
-    label: (
-      <strong>
-        5
-        <i
-          className='fa fa-star fa-1x'
-          style={{ display: 'contents' }}
-          aria-hidden='true'
-        ></i>
-      </strong>
-    )
-  },
-  20: {
-    label: (
-      <strong>
-        4<i className='fa fa-star fa-1x' aria-hidden='true'></i>
-      </strong>
-    )
-  },
-  40: {
-    label: (
-      <strong>
-        3<i className='fa fa-star fa-1x' aria-hidden='true'></i>
-      </strong>
-    )
-  },
-  60: {
-    label: (
-      <strong>
-        2<i className='fa fa-star fa-1x' aria-hidden='true'></i>
-      </strong>
-    )
-  },
-  80: {
-    label: (
-      <strong>
-        1<i className='fa fa-star fa-1x' aria-hidden='true'></i>
-      </strong>
-    )
-  },
-  100: { label: <strong>Any</strong> }
-};
-
-const rating = v => {
-  switch (v) {
-    case 100:
-      return 0;
-    case 80:
-      return 1;
-    case 60:
-      return 2;
-    case 40:
-      return 3;
-    case 20:
-      return 4;
-    default:
-      0;
-      return 5;
-  }
-};
-
 const ProductFilter = props => {
   const { filterProducts } = props;
 

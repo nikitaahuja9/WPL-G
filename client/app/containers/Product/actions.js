@@ -432,7 +432,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: s.brand,
         min: s.min,
         max: s.max,
-        rating: s.rating,
         order: s.order,
         pageNumber: 1 //s.pageNumber
       };
@@ -443,7 +442,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: v,
         min: s.min,
         max: s.max,
-        rating: s.rating,
         order: s.order,
         pageNumber: s.pageNumber
       };
@@ -454,7 +452,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: s.brand,
         min: s.min,
         max: s.max,
-        rating: s.rating,
         order: v,
         pageNumber: s.pageNumber
       };
@@ -465,18 +462,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: s.brand,
         min: v[0],
         max: v[1],
-        rating: s.rating,
-        order: s.order,
-        pageNumber: s.pageNumber
-      };
-    case 'rating':
-      return {
-        name: s.name,
-        category: s.category,
-        brand: s.brand,
-        min: s.min,
-        max: s.max,
-        rating: v,
         order: s.order,
         pageNumber: s.pageNumber
       };
@@ -487,7 +472,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: s.brand,
         min: s.min,
         max: s.max,
-        rating: s.rating,
         order: s.order,
         pageNumber: v
       };
@@ -498,7 +482,6 @@ const productsFilterOrganizer = (n, v, s) => {
         brand: s.brand,
         min: s.min,
         max: s.max,
-        rating: s.rating,
         order: s.order,
         pageNumber: s.pageNumber
       };
